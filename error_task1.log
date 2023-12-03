@@ -1,0 +1,8 @@
+2023-12-03 15:16:53,498:ERROR:Возникла ошибка: 
+Traceback (most recent call last):
+  File "/Users/the_ryuk/Desktop/PythonHW2/HW8/Task1.py", line 35, in main
+    my_string = MyStr(args.value, args.author)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/the_ryuk/Desktop/PythonHW2/HW8/Task1.py", line 11, in __new__
+    raise ValueError("Value должно быть строкой, не содержащей только цифры")
+ValueError: Value должно быть строкой, не содержащей только цифры

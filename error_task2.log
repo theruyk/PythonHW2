@@ -1,0 +1,8 @@
+2023-12-03 14:56:13,356:ERROR:Число не является целым числом или числом с плавающей запятой 
+Traceback (most recent call last):
+  File "/Users/the_ryuk/Desktop/PythonHW2/HW8/Task2.py", line 54, in main
+    archive = Archive(args.text, args.number)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/the_ryuk/Desktop/PythonHW2/HW8/Task2.py", line 27, in __new__
+    raise InvalidNumberError("Число должно быть положительным")
+InvalidNumberError: Число должно быть положительным

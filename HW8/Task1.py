@@ -7,8 +7,10 @@ logging.basicConfig(filename='error_task1.log', level=logging.DEBUG,
 
 class MyStr(str):
     def __new__(cls, value, author):
-        if not isinstance(value, str) or not isinstance(author, str):
-            raise ValueError("Value и author должны быть строками")
+        if not isinstance(value, str) or value.isdigit():
+            raise ValueError("Value должно быть строкой, не содержащей только цифры")
+        if not isinstance(author, str) or author.isdigit():
+            raise ValueError("Author должен быть строкой, не содержащей только цифры")
         instance = super(MyStr, cls).__new__(cls, value)
         instance.value = value
         instance.author = author
@@ -55,3 +57,4 @@ if __name__ == '__main__':
     main()
 
 #python3 /Users/the_ryuk/Desktop/PythonHW2/HW8/Task1.py "Текст события" "Имя автора"
+#python3 /Users/the_ryuk/Desktop/PythonHW2/HW8/Task1.py 123 456
